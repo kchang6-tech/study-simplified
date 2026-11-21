@@ -1,0 +1,19 @@
+# Study Simplified: Prototype Revision
+
+Peer Feedback and Decisions
+
+| Peer Feedback / Observed Issue | Decision | What Changed or Why |
+
+| Reviewers could only access the README and could not interact with the application code. | Acted on | I am including the actual application files in the public GitHub repository so reviewers can access the prototype and understand how it works. |
+| The README clearly explained the purpose, user flow, and limitations. | Adapted | I kept the existing explanation but expanded the documentation to include the revisions, testing results, and AI-use disclosure. |
+| The study guide structure of a simplified explanation, three key concepts, and three practice questions was useful. | Kept | I retained this structure because it provides students with a simple and consistent study format. |
+| Keyword matching sometimes returned unrelated information. For example, a question about taxes produced income-statement information. | Acted on | I improved topic recognition so unsupported or ambiguous inputs receive a message instead of an unrelated study guide. |
+| Students could potentially rely on incorrect study materials. | Acted on | I added an accuracy safeguard that displays the original notes alongside the study guide and reminds students to verify the information. |
+
+Most Important Changes
+
+The revised prototype focuses on three improvements. The first was improved topic recognition to reduce unrelated study guide responses. Added an accuracy safeguard by displaying original notes alongside the study guide. And finally, improved input validation for empty, short, ambiguous, and unsupported inputs.
+
+What I Learned
+
+The feedback helped me recognize that a useful educational tool needs to do more than produce organized study materials. It also needs to communicate its limitations and avoid presenting potentially misleading information. The most important revision was improving how the application handles topics it does not recognize. A clear message that the prototype cannot process a topic is more useful than providing a confident but unrelated answer.
