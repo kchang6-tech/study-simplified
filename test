@@ -1,0 +1,46 @@
+# Study Simplified: Prototype Testing
+
+## Testing Purpose
+
+The purpose of testing was to determine whether the revised Study Simplified prototype provides relevant study materials, handles unsupported inputs appropriately, and reduces the possibility of misleading students.
+
+## Test Results
+
+| Test | Input / Action | Expected Result | Actual Result | Status |
+|---|---|---|---|---|
+| 1. Typical: Income Statement | Enter notes about revenue, expenses, and profit. | Relevant study guide with a simplified explanation, three key concepts, and three practice questions. | The application generated an income statement explanation, identified revenue, expenses, and net income, and provided three relevant practice questions. | PASS |
+| 2. Typical: Balance Sheet | Enter notes about assets and liabilities. | Relevant study guide with original topic information represented accurately. | The application generated a balance sheet explanation and identified assets, liabilities, and owner's equity, with three practice questions. | PASS |
+| 3. Challenge: Taxes | Enter notes about taxes and deductible expenses. | Avoid returning an unrelated income-statement study guide. | The application explained that the topic was not supported and suggested supported topics instead. | PASS |
+| 4. Invalid: Empty Input | Click the button without entering notes. | Display an error requesting input. | The application asked the user to paste a few lines of lecture notes before continuing. | PASS |
+| 5. Risk: Unsupported Topic | Enter notes about photosynthesis. | Avoid generating unrelated finance information. | The application explained that the topic was not supported and suggested supported topics. | PASS |
+
+## Before-and-After Comparison
+
+The original prototype used keyword matching that could return unrelated prepared responses. For example, a tax-related input could receive an income-statement explanation because both topics contained similar keywords, such as expenses.
+
+The revised prototype was tested using the same tax-related input.
+
+**Original issue:** The earlier version could return an unrelated study guide when it identified overlapping keywords.
+
+**Revised result:** The application displayed a message explaining that the topic was not supported and listed topics it could currently handle.
+
+**What changed:** The revised prototype is more careful about unsupported topics. Instead of presenting unrelated information as a useful study guide, it communicates its limitations.
+
+## Testing Evidence
+
+Five tests were completed using two typical finance-related inputs, one challenging tax-related input, one empty input, and one unsupported science topic.
+
+All five tests produced the expected behavior.
+
+The results suggest that the prototype can provide structured study materials for its prepared examples while handling unsupported and invalid inputs more appropriately.
+
+## Remaining Improvements
+
+Future improvements could include:
+- Connecting a live AI model.
+- Supporting additional academic subjects.
+- Improving the accuracy and flexibility of topic recognition.
+- Testing with a larger variety of student-provided lecture notes.
+- Conducting usability testing with additional college students.
+
+Although the tests passed, they represent a small set of examples and do not establish that the application will work correctly for every possible input.
